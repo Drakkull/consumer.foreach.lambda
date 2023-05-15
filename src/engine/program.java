@@ -21,9 +21,10 @@ public class program {
             list.add(new Product("PC", 4444.00));
             list.add(new Product("Toy", 25.00));
 
-            Function<Product, String> func = p -> p.getName().toUpperCase();
-
-            List<String> names= list.stream().map(func).collect(Collectors.toList());
+            //Deleting this one down below
+            //Function<Product, String> func = p -> p.getName().toUpperCase();
+            //Copying the "func" and turning it into a lambda inline expression inside map ()
+            List<String> names= list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 
           names.forEach(System.out::println);
 
